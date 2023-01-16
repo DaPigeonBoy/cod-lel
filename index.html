@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <title>Styling Components</title>
+</head>
+<body>
+    <div id="app">React has not rendered yet</div>
+    <script type="text/babel">
+        var Profile= function(props){
+
+
+var profStyle = {
+    display:'inline-block',
+    height:300,
+    width:200,
+    margin:3,
+    padding:0,
+    backgroundColor:"#fff",
+    filter:"drop-shadow(0px 0px 6px #444)"
+}
+
+return(
+
+<div style= {profStyle}>
+
+    <Avatar  img ={props.img}  />
+    <UserName name = {props.name} />
+
+</div>    
+
+)
+
+}
+
+
+var Avatar = function(props){
+
+    var avtarStyle = {
+
+        width:150,
+        height:150,
+        borderRadius:"50%",
+        marginLeft:25
+    }
+    return(
+
+    <img style={avtarStyle} src={props.img} alt=""/>
+    )
+}
+
+
+
+var UserName = function(props){
+
+    var userStyle = {
+textAlign:"center"
+
+    }
+    return(
+<h2 style={userStyle}>  {props.name}  </h2>
+
+    )
+}
+
+
+ReactDOM.render(
+    <div>
+<Profile   img="image/cat.webp"name="kian"/>
+
+<Profile   img="image/cat.webp"name="mery"/>
+
+
+<Profile   img="image/cat.webp"name="david"/>
+<Profile   img="image/cat.webp"name="mery"/>
+
+</div>
+
+
+,
+
+document.getElementById('app')
+
+)
+
+        
+  </script>
+</body>
+</html>
+<!-- Ep 11 (Cerating Functional Components) -->
+                <!-- // var ColorSpectrum = function() {
+                //     return (
+                    //         <h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>
+                    //     );
+                    // }
+                    
+                // var Red = function() {
+                //     return(
+                //         <h1>red</h1>
+                //     );
+                // }
+                
+                // ReactDOM.render (
+                //     <div>
+                //         <Red />
+                //         <ColorSpectrum/>    
+                //     </div>,
+                //     document.getElementById('app')
+                // ) -->
+
+<!-- Ep 12 (Creating Class Components) -->
+    <!-- // class Flower extends React.Component {
+    //     render () {
+        //         return (
+            //             <h2> Hello and welcome to my site</h2>
+            //         )
+            //     }
+            // }
+            // ReactDOM.render  (
+                //     <Flower/>,
+                //     document.getElementById('app')
+                // ) -->
+
+<!-- Ep () 15 (Styling Stateless Functional Components)-->
+
+<!-- Ep 27 (React Objects ) -->
+ <!-- var Flower = function (props) {
+         return (
+            <div>
+                 <h2> Flower Color : {props.flowerColor}</h2>
+                 <h2> Flower Name : {props.flowerName}</h2>
+             </div>
+         )
+     }
+     ReactDOM.render (
+         <Flower flowerColor = 'Red' flowerName = 'Red daisy'/>,
+       document.getElementById('app')
+     ) -->
